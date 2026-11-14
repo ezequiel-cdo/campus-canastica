@@ -1,11 +1,19 @@
 {
-  "schema": "aulaqr-rutas-v1",
-  "descripcion": "Rutas AulaQR por asignatura. Añadir únicamente direcciones verificadas del Centro Prepara Canástica.",
-  "asignaturas": {
-    "Ciencias Naturales": null,
-    "Ciencias Sociales": null,
-    "Idiomas": null,
-    "Lengua Española": null,
-    "Matemática": null
+  "schema": "aulaqr-enlaces-asignatura-v1",
+  "centro": "Centro Educativo Prepara Canástica",
+  "descripcion": "Enlaces de acceso a AulaQR por grado y asignatura. El Campus no gestiona períodos ni actividades internas.",
+  "grados": {
+    "3ro": {
+      "Matemática": {
+        "url": "https://ezequiel-cdo.github.io/aulaqr-matematicas-lab/matematica-3ro-algebra/",
+        "nombre": "Matemática 3ro"
+      }
+    },
+    "4to": {
+      "Matemática": {
+        "url": "https://ezequiel-cdo.github.io/aulaqr-matematicas-lab/matematica-4to-geometria/",
+        "nombre": "Matemática 4to"
+      }
+    }
   }
 }

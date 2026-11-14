@@ -1,3 +1,41 @@
+# AulaQR Campus · P-02C.4 corregido — Enlaces independientes a AulaQR
+
+## Decisión arquitectónica
+
+**Campus decide el destino de aprendizaje según grado y asignatura; AulaQR gestiona los períodos P1–P4, secuencias, actividades, evaluaciones y retroalimentación.** Por eso no existe un catálogo anual P1–P4 dentro de Campus ni se registran períodos en sus archivos.
+
+## Cambio incluido
+
+- `assets/aulaqr-rutas.json`: directorio `aulaqr-enlaces-asignatura-v1` por `grados` → `asignatura` → `url`.
+- `estudiantes/index.html`: desde el horario, al elegir Matemática de 3ro o 4to se abre el enlace publicado para ese grado; las demás asignaturas conservan un aviso explícito de ruta pendiente.
+- **No cambia** `assets/horario-aprobado.json`, las páginas administrativa y docente ni la portada institucional respecto de P-02C.3.
+
+## Recursos inicialmente enlazados (publicaciones P1)
+
+- 3ro Matemática: https://ezequiel-cdo.github.io/aulaqr-matematicas-lab/matematica-3ro-algebra/
+- 4to Matemática: https://ezequiel-cdo.github.io/aulaqr-matematicas-lab/matematica-4to-geometria/
+
+**Limitación consciente:** las URL actuales son experiencias de **P1**, todavía no portales anuales. El siguiente desarrollo corresponde al repositorio independiente `ezequiel-cdo/aulaqr-matematicas-lab`, donde se organizarán P1–P4 y se conservarán estos destinos públicos (o se redirigirán hacia los nuevos portales). Al añadir P2–P4 allí, **no será necesario actualizar Campus**. No afirmar que el recorrido anual funciona antes de esa actualización.
+
+## Pruebas de aceptación
+
+1. Ejecutar `python3 -m http.server 8000` desde la raíz del ZIP descomprimido.
+2. En `/estudiantes/`, escoger 3ro A → Matemática: el enlace abre el AulaQR de 3ro en una pestaña nueva.
+3. Repetir 4to A → Matemática: el enlace abre el AulaQR de 4to.
+4. Una asignatura sin ruta específica no abre Matemática y muestra un aviso de enlace pendiente.
+5. Comprobar que la navegación, filtros e impresión permanecen disponibles en Administración y Personal Docente.
+6. Comprobar que `/aulaqr/` **no** existe en Campus: no debe existir duplicación del organizador P1–P4.
+
+## Seguridad y estado
+
+Se preservan los PIN **solo demostrativos** `0086` (administración) y `2027` (docentes); GitHub Pages no aplica control de acceso real. No publicar datos de estudiantes ni registros sensibles. El archivo de horario mantiene el estado `BASE_DE_REVISION_NO_APROBADA` hasta autorización institucional. Los docentes aparecen abreviados; eso no equivale a anonimización plena.
+
+## Procedimiento de publicación
+
+Crear rama `desarrollo/aulaqr-p02c4` desde `main`, subir **el contenido descomprimido** manteniendo sus rutas, revisar diferencias y realizar pruebas antes de fusionar. Este paquete no modifica GitHub automáticamente. No subir el ZIP anterior denominado `P02C4_AulaQR_Anual`: quedó sustituido por esta versión corregida.
+
+---
+
 # AulaQR Campus · P-02C.3 · Área de Estudiantes y PIN docente
 
 ## Alcance
