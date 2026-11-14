@@ -3,7 +3,7 @@
   "centro": "Centro Educativo Prepara Canástica",
   "anoEscolar": "2026-2027",
   "modalidad": "sabatina",
-  "version": "H-01-original",
+  "version": "H-01.1-propuesta-ajustes-docentes-idiomas",
   "estado": "BASE_DE_REVISION_NO_APROBADA",
   "bloques": [
     {
@@ -405,12 +405,12 @@
       "bloque": "B5",
       "inicio": "2:30",
       "fin": "4:00",
-      "materia": "Lengua Española",
-      "alias": "A. Poche",
-      "docId": "DOC-002",
-      "docente": "A. Poche",
-      "estado": "Confirmado",
-      "observacion": "Posible choque si 3ro A y 4to B cursan el mismo día",
+      "materia": "Idiomas",
+      "alias": "S. Cuevas",
+      "docId": "DOC-011",
+      "docente": "S. Cuevas",
+      "estado": "Confirmado por indicación del centro",
+      "observacion": null,
       "grupo": "3ro A"
     },
     {
@@ -616,11 +616,11 @@
       "inicio": "1:15",
       "fin": "2:30",
       "materia": "Idiomas",
-      "alias": "Sin asignar",
+      "alias": "J. Montero",
       "docId": null,
-      "docente": "Sin resolver",
-      "estado": "Pendiente de confirmar",
-      "observacion": "Abreviatura ambigua: no asignar identidad sin validación",
+      "docente": "J. Montero",
+      "estado": "Docente informado por el centro",
+      "observacion": "Código interno de J. Montero pendiente de asignación",
       "grupo": "4to B"
     },
     {
@@ -751,11 +751,11 @@
       "inicio": "11:00",
       "fin": "12:15",
       "materia": "Idiomas",
-      "alias": "Sin asignar",
+      "alias": "J. Montero",
       "docId": null,
-      "docente": "Sin resolver",
-      "estado": "Pendiente de confirmar",
-      "observacion": "Abreviatura ambigua: no asignar identidad sin validación",
+      "docente": "J. Montero",
+      "estado": "Docente informado por el centro",
+      "observacion": "Código interno de J. Montero pendiente de asignación",
       "grupo": "5to A"
     },
     {
@@ -811,11 +811,11 @@
       "inicio": "9:15",
       "fin": "10:30",
       "materia": "Idiomas",
-      "alias": "Sin asignar",
+      "alias": "J. Montero",
       "docId": null,
-      "docente": "Sin resolver",
-      "estado": "Pendiente de confirmar",
-      "observacion": "Abreviatura ambigua: no asignar identidad sin validación",
+      "docente": "J. Montero",
+      "estado": "Docente informado por el centro",
+      "observacion": "Código interno de J. Montero pendiente de asignación",
       "grupo": "5to B"
     },
     {
@@ -931,11 +931,11 @@
       "inicio": "2:30",
       "fin": "4:00",
       "materia": "Idiomas",
-      "alias": "Sin asignar",
+      "alias": "J. Montero",
       "docId": null,
-      "docente": "Sin resolver",
-      "estado": "Pendiente de confirmar",
-      "observacion": "Abreviatura ambigua: no asignar identidad sin validación",
+      "docente": "J. Montero",
+      "estado": "Docente informado por el centro",
+      "observacion": "Código interno de J. Montero pendiente de asignación",
       "grupo": "5to C"
     }
   ],
@@ -943,23 +943,23 @@
     {
       "codigo": "OBS-01",
       "tipo": "Distribución curricular",
-      "descripcion": "3ro A registra Lengua Española en B3 y B5; Idiomas no figura",
-      "estado": "Abierta",
-      "criterio": "Confirmar si es intencional o corregir fuente"
+      "descripcion": "3ro A: B5 actualizado a Idiomas con S. Cuevas; se elimina la duplicación de Lengua Española.",
+      "estado": "Atendida en propuesta H-01.1",
+      "criterio": "Comprobar y aprobar la propuesta ajustada"
     },
     {
       "codigo": "OBS-02",
       "tipo": "Choque potencial",
-      "descripcion": "A. Poche registra B5 simultáneamente en 3ro A y 4to B",
-      "estado": "Condicional",
-      "criterio": "Confirmar día y modalidad de ambas asignaciones"
+      "descripcion": "Se retira de 3ro A B5 a A. Poche; desaparece el choque previamente señalado con 4to B B5.",
+      "estado": "Atendida en propuesta H-01.1",
+      "criterio": "Comprobar y aprobar la propuesta ajustada"
     },
     {
       "codigo": "OBS-03",
       "tipo": "Identidad docente",
-      "descripcion": "docente no identificado aparece en 4 asignaciones",
-      "estado": "Abierta",
-      "criterio": "Validar nombre(s) y si existe docencia compartida"
+      "descripcion": "J. Montero identificado en las cuatro asignaciones pendientes de Idiomas (4to B y 5to A, B, C).",
+      "estado": "Identidad informada; código interno pendiente",
+      "criterio": "Asignar código interno estable a J. Montero en el catálogo docente"
     },
     {
       "codigo": "OBS-04",
