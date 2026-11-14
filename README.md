@@ -1,29 +1,30 @@
-# Centro Educativo Prepara Canástica — Portal de revisión P-02B.4
+# AulaQR Campus · Horario H-01.3 · Paquete de revisión
 
-Sitio estático de **AulaQR Campus** para consulta y revisión editorial del equipo de gestión. Modalidad EPJA sabatina, año escolar 2026–2027.
+Dos rutas: `administracion/` (generador y selector de docentes guía, PIN **demostrativo** `0086`) y `personal-docente/` (solo consulta, filtros, impresión, CSV para Excel). Conserva las cinco pestañas originales.
 
-## Publicación en GitHub Pages
+## Flujo editorial
 
-1. En el repositorio personal `ezequiel-cdo/campus-canastica`, crear una rama de trabajo (por ejemplo, `desarrollo/portal-p02b4`).
-2. Subir a la raíz de esa rama `index.html`, `README.md` y la carpeta `assets/` completa. **No subir el ZIP sin extraer**.
-3. Verificar la previsualización local y abrir un Pull Request hacia `main`.
-4. Revisar y aprobar el Pull Request antes de fusionarlo.
-5. En **Settings > Pages**, seleccionar **Deploy from a branch** y **main / (root)**; guardar.
-6. Confirmar publicación en `https://ezequiel-cdo.github.io/campus-canastica/`.
+1. Administración configura los docentes guía y genera una propuesta.
+2. Revisa choques, docentes pendientes, cobertura de asignaturas y disponibilidad real. No implica aprobación automática.
+3. Pulsa **Descargar horario aprobado (JSON)**. El archivo se descarga localmente; no cambia el sitio.
+4. Con autorización institucional y revisión de privacidad, reemplaza `assets/horario-aprobado.json` en una rama de desarrollo y crea un Pull Request.
+5. Tras fusionar y desplegar, Personal Docente carga la misma versión JSON al abrir o actualizar la página. No usa localStorage.
 
-## Privacidad y alcance
+## Riesgo de publicación
 
-GitHub Pages es público: no equivale a un sistema de acceso interno. No incluir expedientes, datos de estudiantes, credenciales, calificaciones, solicitudes personales ni documentos de gestión reservados.
+**NO SUBIR ESTA VERSIÓN CON NOMBRES A GITHUB PAGES HASTA APROBAR SU DIVULGACIÓN.** En GitHub Pages el PIN de 4 dígitos no es una medida de seguridad: cualquiera puede ver el código, el JSON y los datos docentes. Los botones de administrador no requieren un backend y pueden manipularse. Para uso restringido real se necesita autenticación en servidor, autorización por roles y almacenamiento privado. La primera verificación debe hacerse en un servidor local.
 
-## Contenido
+## Ejecución local
 
-La historia, misión, visión y valores son **redacciones editoriales propuestas**, no actas aprobadas. Se han evitado fechas de fundación, fundadores y resultados institucionales inventados. El emblema contiene «2014», dato que no se convierte en declaración de fundación.
+Desde la carpeta extraída: `python3 -m http.server 8000` y abrir `http://localhost:8000/`. No usar `file://` para la ruta docente, porque el navegador bloquea la carga fetch del JSON local.
 
-La normativa y los requisitos generales de PREPARA se han apoyado en páginas oficiales del MINERD. Los horarios locales, cargos y datos administrativos no se han inventado.
+El archivo inicial `horario-aprobado.json` es una **BASE_DE_REVISION_NO_APROBADA**, deliberadamente no se presenta como aprobación real. El generador solo permuta las asignaciones importadas y no conoce disponibilidad real. Pendientes heredados se conservan.
 
-## Archivos
 
-- `index.html`: contenido principal (HTML semántico).
-- `assets/styles.css`: estilos responsive.
-- `assets/app.js`: navegación activa.
-- `assets/minerd.png` y `assets/logo-canastica.png`: imágenes institucionales suministradas.
+## Presentación pública de nombres docentes (P-02C.2a)
+
+Esta edición muestra la inicial del primer nombre, punto y primer apellido (ejemplo: `A. Ovando`). En los casos de apellidos compuestos se conserva el conjunto (`P. de los Santos`). Los códigos `DOC-001` a `DOC-014` siguen identificando internamente a los docentes sin usar los nombres completos. La etiqueta de docente pendiente se mantiene sin inventar identidad.
+
+**Advertencia:** Esta nomenclatura es una seudonimización parcial, no anonimización irreversible. Todos los archivos de GitHub Pages y los datos exportados son públicos, y el PIN de demostración no protege el código ni el JSON. Los horarios aún requieren validación y aprobación institucional.
+
+No volver a subir la edición anterior P-02C.2, que contiene nombres completos.
