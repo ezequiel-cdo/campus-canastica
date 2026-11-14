@@ -1,0 +1,11 @@
+{
+  "schema": "aulaqr-rutas-v1",
+  "descripcion": "Rutas AulaQR por asignatura. Añadir únicamente direcciones verificadas del Centro Prepara Canástica.",
+  "asignaturas": {
+    "Ciencias Naturales": null,
+    "Ciencias Sociales": null,
+    "Idiomas": null,
+    "Lengua Española": null,
+    "Matemática": null
+  }
+}
